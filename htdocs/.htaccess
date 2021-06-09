@@ -1,0 +1,20 @@
+<files .htaccess> 
+order allow,deny  
+deny from all 
+</files>
+RewriteEngine On 
+RewriteRule ^inicio/$ plant_index.php [L] 
+RewriteRule ^login/?$ plantillas/plant_login.php [L]
+RewriteRule ^citas/?$ plantillas/plant_citas.php [L]
+RewriteRule ^generarHorario/?$ plantillas/plant_generarHorario.php [L]
+RewriteRule ^calendario/?$ plantillas/plant_calendario.php [L]
+RewriteRule ^horario/?$ plantillas/plant_horario.php [L]
+RewriteRule ^userCitas/?$ plantillas/plant_citas_usuario.php [L]
+RewriteRule ^listadoCitas/?$ plantillas/plant_pedirCita.php [L]
+RewriteRule ^listadoCitas/consulta/?$ plantillas/consultaHorario_plant.php [L]
+RewriteRule ^listadoCitas/consulta/horasDisponibles/?$ plantillas/consultaHorarioFecha_plant.php [L]
+RewriteRule ^confirmarCita/?$ plantillas/plant_crear_cita.php [L]
+RewriteRule ^cancelarCita/?$ plantillas/plant_cancelar.php [L]
+RewriteRule ^comprobarCitas/?$ funciones/comprobarCitas_usuario.php [L]
+RewriteRule ^verificandoCancelacion/?$ funciones/cancelarCitas.php [L]
+
